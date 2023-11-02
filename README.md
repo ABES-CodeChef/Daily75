@@ -24,7 +24,7 @@ follow these steps:
 
 4. Form directory structure of the Repository: Use the `make.sh` script to form directory structure
 
-   `./make.sh form`
+   
 
       | Action |       Command      |    Example      |
       |-----------------|-----------------|-----------------|
@@ -32,9 +32,12 @@ follow these steps:
       | To clean a day folder | ``./make.sh clean <day/>all>`` | ``./make.sh clean 5`` |
       | To create all directories (0 to 75)  | ``./make.sh form <day/all>`` | ``./make.sh form all`` |
       | To clean all directories (0 to 75)  | ``./make.sh clean <day/all>`` | ``./make.sh clean all`` |
-            Note: This Bash script, make.sh, is intended for Unix-based systems like Linux and macOS. 
-                  To use it on Windows, you'll need to install a Bash environment, such as Windows Subsystem for Linux (WSL) or Git Bash.
-                  Once installed, follow the README for instructions. 
+
+<table border="1">
+        <tr>
+            <td>Note: This Bash script, make.sh, is intended for Unix-based systems like Linux and macOS. To use it on Windows, you'll need to install a Bash environment, such as Windows Subsystem for Linux (WSL) or Git Bash. Once installed, follow the README for instructions.l</td>
+        </tr>
+    </table> 
 5. Solving Problems: Use this template to write your code for solving DSA
    problems. You can use any programming language of your choice. Organize your code in a
    structured manner within the appropriate folders.
