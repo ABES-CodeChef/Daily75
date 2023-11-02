@@ -71,5 +71,5 @@ if [ "$1" == "form" ] && [ "$1" == "create" ]; then
 elif [ "$1" == "clean" ] && [ "$1" == "remove" ]; then
 	clean_day_folders "$2"
 else
-	echo "Usage: ./make.sh {form|clean} {<day>|all}"
+	echo "Usage: ./make.sh {{form|create}|{clean|remove}} {<day>|all}"
 fi
