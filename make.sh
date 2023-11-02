@@ -66,10 +66,10 @@ clean_day_folders() {
 }
 
 # Main script
-if [ "$1" == "form" ]; then
+if [ "$1" == "form" ] && [ "$1" == "create" ]; then
 	form_day_folders "$2"
-elif [ "$1" == "clean" ]; then
+elif [ "$1" == "clean" ] && [ "$1" == "remove" ]; then
 	clean_day_folders "$2"
 else
-	echo "Usage: ./make.sh {form|clean} <day>"
+	echo "Usage: ./make.sh {form|clean} {<day>|all}"
 fi
