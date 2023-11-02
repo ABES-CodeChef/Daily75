@@ -1,9 +1,11 @@
 #!/bin/bash
 
-for ((i = 1; i <= 75; i++)); do
-	folder_name="day_$i"
-	mkdir -p "$folder_name"
-	touch "$folder_name/summary.md"
+# Loop from 0 to 75
+for i in {0..75}; do
+	# Create folder with leading zeros if needed
+	day_number=$(printf "%02d" "$i")
+	mkdir -p "day_$day_number"
+	touch "day_$day_number/summary.md"
 done
 
 touch "README.md"
