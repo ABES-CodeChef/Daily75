@@ -30,8 +30,8 @@ follow these steps:
       |-----------------|-----------------|-----------------|
       | To create a day folder | ``./make.sh form <day/all>`` |  `./make.sh form 10` |
       | To clean a day folder | ``./make.sh clean <day/>all>`` | ``./make.sh clean 5`` |
-      | To create all directories (0 to 75)  | ``./make.sh form <day/all>`` | ``./make.sh form all`` |
-      | To clean all directories (0 to 75)  | ``./make.sh clean <day/all>`` | ``./make.sh clean all`` |
+      | To create all directories (1 to 75)  | ``./make.sh form <day/all>`` | ``./make.sh form all`` |
+      | To clean all directories (1 to 75)  | ``./make.sh clean <day/all>`` | ``./make.sh clean all`` |
 
 <table border="1">
         <tr>
