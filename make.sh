@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Script Name: make.sh
+# Description: A script to create and clean day's folders for 75 days DSA challenge .
+# Author: Tanveer Raza
+# Copyright (c) 2023 CodeChef Chapter ABES EC
+# Licensed under the MIT License
+
 # Function to create a day folder
 create_day() {
 	local day_number="$1"
