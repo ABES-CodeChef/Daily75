@@ -35,7 +35,7 @@ follow these steps:
 
 <table border="1">
         <tr>
-            <td><b>Note:</b> This Bash script, make.sh, is intended for Unix-based systems like Linux and macOS. To use it on Windows, you'll need to install a Bash environment, such as Windows Subsystem for Linux (WSL) or Git Bash. Once installed, follow the README for instructions.l</td>
+            <td><b>Note:</b> This Bash script, make.sh, is intended for Unix-based systems like Linux and macOS. To use it on Windows, you'll need to install a Bash environment, such as Windows Subsystem for Linux (WSL) or Git Bash. Once installed, follow the README for instructions.</td>
         </tr>
     </table> 
 5. Solving Problems: Use this template to write your code for solving DSA
