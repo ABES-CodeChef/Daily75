@@ -16,21 +16,25 @@ follow these steps:
 
    `git clone https://github.com/ABES-CodeChef/Daily75.git`
 
-3. Create a New Branch: Create a new branch for your challenge journey.
+3. Form directory structure of the Repository: Use the `make.sh` script to form directory structure
+
+   `./make.sh form`
+
+4. Create a New Branch: Create a new branch for your challenge journey.
    You can name it something like "day1", "day2", and so on, to keep track
    of your progress.
 
    `git checkout -b day1`
 
-4. Solving Problems: Use this template to write your code for solving DSA
+5. Solving Problems: Use this template to write your code for solving DSA
    problems. You can use any programming language of your choice. Organize your code in a
    structured manner within the appropriate folders.
 
-5. Problem Descriptions: Add problem descriptions, links, or any additional
+6. Problem Descriptions: Add problem descriptions, links, or any additional
    information about the problem you are solving in `SUMMARY.md` or as comments
    in your code.
 
-6. Commit and Push: After solving a problem, commit your changes and push them to your forked repository.
+7. Commit and Push: After solving a problem, commit your changes and push them to your forked repository.
 
    ```bash
    git add .
@@ -38,9 +42,9 @@ follow these steps:
    git push origin day1
    ```
 
-7. Once you are done with you task, merge the branch onto you main branch of you repository
+8. Once you are done with you task, merge the branch onto you main branch of you repository
 
-8. Repeat: Repeat the process for each day of the challenge, creating a new branch for each day and solving DSA problems.
+9. Repeat: Repeat the process for each day of the challenge, creating a new branch for each day and solving DSA problems.
 
 ## Structure of the Repository
 
