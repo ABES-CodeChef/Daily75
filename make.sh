@@ -1,62 +1,69 @@
 #!/bin/bash
 
-# Create a directory for a specific day
-create_day_folder() {
-	if [ "$1" ]; then
-		if [ "$1" != "all" ]; then
-			day_number=$(printf "%02d" "$1")
-			mkdir -p "day_$day_number"
-			cp "SUMMARY.md" "day_$day_number/SUMMARY.md"
-			echo "Created folder for day $1"
+# Function to create a day folder
+create_day() {
+	local day_number="$1"
+	local folder_name="day_$(printf "%02d" "$day_number")"
 
-		elif [ "$1" == "all" ]; then
-			for i in {0..75}; do
-				day_number=$(printf "%02d" "$i")
-				folder_name="day_$day_number"
-				mkdir -p "$folder_name"
-				cp "SUMMARY.md" "day_$day_number/SUMMARY.md"
-			done
-			echo "Form operation completed."
-
-		fi
+	if [ -d "$folder_name" ]; then
+		echo "Folder for day $day_number already exists, skipping."
 	else
-		echo "Usage: ./make.sh form [<day>, all]"
+		mkdir -p "$folder_name"
+		cp -i "SUMMARY.md" "$folder_name/SUMMARY.md"
+		echo "Created folder for day $day_number"
 	fi
 }
 
-# Clean up the day folder
-clean_day_folder() {
-	if [ "$1" ]; then
-		if [ "$1" != "all" ]; then
-			day_number=$(printf "%02d" "$1")
-			folder_name="day_$day_number"
-			if [ -d "$folder_name" ]; then
-				rm -rf "$folder_name"
-				echo "Removed folder for day $1"
-			else
-				echo "Folder for day $1 does not exist"
-			fi
+# Function to form day folders
+form_day_folders() {
+	local target_day="$1"
 
-		elif [ "$1" == "all" ]; then
-			for i in {0..75}; do
-				day_number=$(printf "%02d" "$i")
-				folder_name="day_$day_number"
-				echo "Deleting $folder_name"
-				rm -rf "$folder_name"
-			done
-			echo "Clean operation completed."
-		fi
-
+	if [ "$target_day" == "all" ]; then
+		for i in {0..75}; do
+			create_day "$i"
+		done
+		echo "Form operation completed."
+	elif [[ "$target_day" =~ ^[0-9]+$ ]]; then
+		create_day "$target_day"
 	else
-		echo "Usage: ./make.sh clean [<day>, all]"
+		echo "Invalid day number: $target_day"
+	fi
+}
+
+# Function to remove a day folder
+remove_day() {
+	local day_number="$1"
+	local folder_name="day_$(printf "%02d" "$day_number")"
+
+	if [ -d "$folder_name" ]; then
+		rm -rf "$folder_name"
+		echo "Removed folder for day $day_number"
+	else
+		echo "Folder for day $day_number does not exist, skipping."
+	fi
+}
+
+# Function to clean day folders
+clean_day_folders() {
+	local target_day="$1"
+
+	if [ "$target_day" == "all" ]; then
+		for i in {0..75}; do
+			remove_day "$i"
+		done
+		echo "Clean operation completed."
+	elif [[ "$target_day" =~ ^[0-9]+$ ]]; then
+		remove_day "$target_day"
+	else
+		echo "Invalid day number: $target_day"
 	fi
 }
 
 # Main script
 if [ "$1" == "form" ]; then
-	create_day_folder "$2"
+	form_day_folders "$2"
 elif [ "$1" == "clean" ]; then
-	clean_day_folder "$2"
+	clean_day_folders "$2"
 else
 	echo "Usage: ./make.sh {form|clean} <day>"
 fi
