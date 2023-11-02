@@ -1,0 +1,2 @@
+#to exclude unnecessary files and folders from version control.
+*.log
