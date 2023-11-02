@@ -14,30 +14,27 @@ follow these steps:
 2. Clone the Repository: Clone your forked repository to your local machine
    using the following command:
 
-   `git clone https://github.com/ABES-CodeChef/Daily75.git`
+   `git clone https://github.com/<your-username>/Daily75.git`
 
 3. Create a New Branch: Create a new branch for your challenge journey.
 
-
    `git checkout -b day1`
-      
 
 4. Form directory structure of the Repository: Use the `make.sh` script to form directory structure
 
-   
+   | Action                              | Command                      | Example               |
+   | ----------------------------------- | ---------------------------- | --------------------- |
+   | To create a day folder              | `./make.sh form <day/all>`   | `./make.sh form 10`   |
+   | To clean a day folder               | `./make.sh clean <day/>all>` | `./make.sh clean 5`   |
+   | To create all directories (1 to 75) | `./make.sh form <day/all>`   | `./make.sh form all`  |
+   | To clean all directories (1 to 75)  | `./make.sh clean <day/all>`  | `./make.sh clean all` |
 
-      | Action |       Command      |    Example      |
-      |-----------------|-----------------|-----------------|
-      | To create a day folder | ``./make.sh form <day/all>`` |  `./make.sh form 10` |
-      | To clean a day folder | ``./make.sh clean <day/>all>`` | ``./make.sh clean 5`` |
-      | To create all directories (1 to 75)  | ``./make.sh form <day/all>`` | ``./make.sh form all`` |
-      | To clean all directories (1 to 75)  | ``./make.sh clean <day/all>`` | ``./make.sh clean all`` |
-
-<table border="1">
+    <table border="1">
         <tr>
             <td><b>Note:</b> This Bash script, make.sh, is intended for Unix-based systems like Linux and macOS. To use it on Windows, you'll need to install a Bash environment, such as Windows Subsystem for Linux (WSL) or Git Bash. Once installed, follow the README for instructions.</td>
         </tr>
-    </table> 
+    </table>
+
 5. Solving Problems: Use this template to write your code for solving DSA
    problems. You can use any programming language of your choice. Organize your code in a
    structured manner within the appropriate folders.
