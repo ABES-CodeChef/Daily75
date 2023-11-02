@@ -1,4 +1,4 @@
-# 75 Days challenge
+# 75 Days DSA challenge
 
 ## Introduction
 
