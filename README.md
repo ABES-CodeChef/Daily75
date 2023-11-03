@@ -2,8 +2,8 @@
 
 ## Introduction
 
-75 days challenge is an in-club initiative bu CodeChef Chapter ABES EC to
-increase the consistency and build a community within the club
+75 days challenge is an in-club initiative by CodeChef ABESEC Chapter to
+increase the consistency and build a community within the club.
 
 To get started with the 75 Days DSA Challenge using this template,
 follow these steps:
